@@ -39,7 +39,7 @@ end
 if isfield(options,'svdopt')
     svdopt=options.svdopt;
 else
-    svdopt='randomized';
+    svdopt='normal';
 end
 if isfield(options,'maxiter')
     maxiter=options.maxiter;
