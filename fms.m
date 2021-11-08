@@ -76,7 +76,8 @@ if strcmp(initopt,'random')
     Vi=orth(Vi);
 elseif strcmp(initopt,'pca')
     %svd initialization
-    [Ui,Si,Vi] = randpca(X,d);
+    [Ui,Si,Vi] = svd(X);
+    Vi = Vi(:, 1:d);
 else
     error('Bad initopt tag')
 end
